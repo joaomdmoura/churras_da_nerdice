@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'HTTParty'
+require 'httparty'
 
 get '/' do
   url = (params["url"]) ? params["url"] : 'http://maps.google.com/maps/api/geocode/json?address=Av.+Pref.+Hirant+Sanazar%2C+631'
