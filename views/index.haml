@@ -1,0 +1,18 @@
+%section.container
+  %h1= result[0]["address_components"][1]["short_name"]
+  .content
+    %ul
+      %li= "#{result[0]["address_components"][1]["long_name"]}, #{result[0]["address_components"][0]["short_name"]}, #{result[0]["address_components"][2]["short_name"]}"
+      %li= "#{result[0]["address_components"][4]["long_name"]}, #{result[0]["address_components"][6]["short_name"]}, #{result[0]["address_components"][7]["short_name"]}"
+      %li= result[0]["formatted_address"]
+      %li= result[0]["geometry"]["location"]
+    %h3
+      JSON object:
+    %small= result
+
+    %h3
+      New JSON URL:
+    %form{action: '/', method:'get'}
+      %input{name: 'url'}
+      %button
+        GET
